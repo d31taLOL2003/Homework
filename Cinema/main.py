@@ -1,0 +1,4 @@
+import cinema
+
+
+cinema.cinema()
