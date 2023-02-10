@@ -2,6 +2,10 @@ from homework10 import Apple
 from homework10 import Samsung
 
 if __name__ == "__main__":
+    """
+    To be able to output our results, we need to import from the file 
+    where our Apple and Samsung classes are located to the file main.py
+    """
     iphone_14 = Apple("Apple", "iPhone 14", "IOS", 6.7, 128)
     print(f"Manufacturer: {iphone_14.get_manufacturer()}")
     print(f"Model: {iphone_14.get_model()}")
