@@ -2,7 +2,7 @@ from igadget import IGadget
 
 
 class Phone(IGadget):
-    def __init__(self, model, os, screen_size, memory):
+    def __init__(self, model: str, os: str, screen_size: str, memory: int):
         """
         The Phone class inherits the IGadget class. Here in 'def __init__' we write parameters 
         for the Phone class. 
@@ -52,7 +52,7 @@ class Phone(IGadget):
         return memory
 
     @property
-    def battery_level(self) -> int:
+    def battery_level(self) -> str:
         """
         This method return Battery level which defaults to 79. And we use "property" 
         so that we can output this method as a parameter
