@@ -18,7 +18,7 @@ def test_change_gender_same_as_current(john: Human) -> None:
     with pytest.raises(Exception, match="already has gender"):
         john.change_gender("male")
 
-###
+
 @pytest.mark.parametrize("invalid_gender", ["tank abrams", "apache attack helicopter"])
 def test_change_gender_invalid_input(john: Human, invalid_gender) -> None:
     """
