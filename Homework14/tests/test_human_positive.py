@@ -88,7 +88,7 @@ def test_age_type(john: Human, age) -> None:
     """
     age = john.age
     assert isinstance(age, int)
-
+###
 
 @pytest.mark.parametrize("gender", ["male", "female", "apache attack helicopter"])
 def test_gender_type(john: Human, gender) -> None:
