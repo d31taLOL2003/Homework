@@ -7,6 +7,8 @@ def john() -> Human:
     """
     Pytest fixture that returns an instance of Human with name "John",
     age 32 and gender "male"
+    Return:
+        john(Human): the instance of the class Human 
     """
     yield Human("John", 32, "male")
 
@@ -16,5 +18,8 @@ def old_john() -> Human:
     """
     Pytest fixture that returns an instance of Human with name "John",
     age 100 and gender "male"
+    
+    Return:
+        john(Human): the instance of the class Human 
     """
     yield Human("John", 100, "male")
