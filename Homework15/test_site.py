@@ -35,7 +35,7 @@ def test_click() -> None:
     driver.quit()
 
 
-def test_scroll():
+def test_scroll() -> None:
     """
     The function of testing the scroll functionality on "dou.ua" website using Chrome browser.
     """
