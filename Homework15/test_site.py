@@ -44,5 +44,5 @@ def test_scroll() -> None:
     driver.implicitly_wait(10)
     driver.get("https://dou.ua/")
     html = driver.find_element(By.TAG_NAME, "html")
-    html.send_keys(Keys.PAGE_DOWN)
+    html.send_keys(Keys.END)
     driver.quit()
