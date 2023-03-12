@@ -21,7 +21,6 @@ class Article(BasePage):
 
         Args:
             title: the title to scroll to.
-
             
         Returns:
             str: the title of the page after scrolling.

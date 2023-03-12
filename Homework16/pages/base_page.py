@@ -69,4 +69,3 @@ class BasePage:
         self.driver.execute_script("window.scrollTo(0, document.body.scrollTop - 200)")
         location = element.location_once_scrolled_into_view
         return location
-
