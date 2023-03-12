@@ -7,6 +7,7 @@ class ArticleList(BasePage):
     def __init__(self, drive):
         """
         The class constructor.
+
         Args:
             drive: WebDriver object which controls the browser.
         """
@@ -16,6 +17,7 @@ class ArticleList(BasePage):
     def choose_article(self):
         """
         Clicks on the link to the chosen article.
+
         Returns:
             An instance of the Article class, which is used to interact with the article page.
         """

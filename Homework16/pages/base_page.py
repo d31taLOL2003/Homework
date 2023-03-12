@@ -7,6 +7,7 @@ class BasePage:
     def __init__(self, driver):
         """
         Initializes an instance of BasePage class.
+        
         Args:
             driver: A web driver instance to control the browser.
         """
@@ -16,6 +17,7 @@ class BasePage:
     def wait_for_element(self, locator):
         """
         Waiting for the element to appear on the page.
+        
         Args:
             locator: A tuple containing the locator type and element locator.
 
@@ -28,6 +30,7 @@ class BasePage:
     def click_for_element(self, locator):
         """
         Clicks on an item on the page.
+        
         Args:
             locator: A tuple containing the locator type and element locator.
 
@@ -37,9 +40,23 @@ class BasePage:
         element = self.wait_for_element(locator)
         element.click()
 
+    def check_clickable_element(self, locator):
+        """
+        Checks if the specified element is clickable within a certain time frame.
+        
+        Args:
+            locator: A tuple containing the locator type and element locator.
+
+        Returns:
+            The clickable WebElement if it is found.
+        """
+        element = self.wait.until(EC.element_to_be_clickable(locator))
+        return element
+
     def scroll_to_element(self, locator):
         """
         Scrolls the page to the item.
+        
         Args:
             locator: A tuple containing the locator type and element locator.
 

@@ -21,9 +21,25 @@ class Article(BasePage):
 
         Args:
             title: the title to scroll to.
-
+            
         Returns:
             str: the title of the page after scrolling.
         """
-        self.scroll_to_element((By.XPATH, f"//h2[text()='{title}']"))
-        return self.driver.title
+        locator = (By.XPATH, f"//h2[text()='{title}']")
+        self.scroll_to_element(locator)
+        return self.driver.find_element(*locator)
+
+    def click_button(self, button):
+        """
+        Clicks the specified button on the salary chart.
+
+        Args:
+            button: The label of the button to be clicked.
+
+        Returns:
+            WebElement: The clicked button element.
+        """
+        locator = (By.XPATH, f"//div[@class='chart-salary']//span[text()='{button}']")
+        self.check_clickable_element(locator)
+        self.click_for_element(locator)
+        return self.driver.find_element(*locator)

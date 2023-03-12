@@ -1,9 +1,10 @@
 def test_page(main_page):
     """
-    The function tests the navigation on the site. It selects a category, a subcategory,
-    and an article and scrolls the page to the subtitle of the article.
+    Test of choosing a category and subcategory, selecting an article,
+    scrolling to a particular section, and clicking a button.
+
     Args:
-        main_page: an instance of the MainPage class used to navigate the website
+        main_page: The MainPage object representing the main page of the website.
 
     Returns:
         None
@@ -11,4 +12,6 @@ def test_page(main_page):
     main_page.choose_category("Стрічка")
     article_list = main_page.choose_sub_category("📊 Аналітика")
     article = article_list.choose_article()
-    article.scroll_to_title("Портрет учасників опитування")
+    article.scroll_to_title("Медіанні зарплати")
+    element = article.click_button("Київ")
+    assert element.is_enabled() and element.is_displayed()

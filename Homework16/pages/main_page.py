@@ -7,6 +7,7 @@ class MainPage(BasePage):
     def __init__(self, driver):
         """
         Constructs a MainPage instance.
+
         Args:
             driver: A web driver instance.
         """
@@ -28,6 +29,7 @@ class MainPage(BasePage):
     def choose_sub_category(self, name):
         """
         Clicks on a subcategory.
+
         Args:
             name: A string with the name of the subcategory to click.
 
