@@ -8,6 +8,7 @@ from pages.main_page import MainPage
 def driver() -> Chrome:
     """
     Fixture to initialize and close a Chrome webdriver.
+
     Returns:
         Chrome: A Chrome webdriver instance.
     """
@@ -23,6 +24,7 @@ def driver() -> Chrome:
 def main_page(driver) -> MainPage:
     """
     Fixture to initialize a MainPage instance.
+    
     Args:
         driver: The Chrome webdriver instance.
 
