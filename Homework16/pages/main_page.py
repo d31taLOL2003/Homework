@@ -39,3 +39,4 @@ class MainPage(BasePage):
         sub_category_locator = (By.XPATH, f"//a[text()='{name}']")
         self.click_for_element(sub_category_locator)
         return ArticleList(self.driver)
+

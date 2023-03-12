@@ -14,4 +14,5 @@ def test_page(main_page):
     article = article_list.choose_article()
     article.scroll_to_title("Медіанні зарплати")
     element = article.click_button("Київ")
+    
     assert element.is_enabled() and element.is_displayed()

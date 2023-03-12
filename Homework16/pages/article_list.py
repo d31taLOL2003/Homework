@@ -23,3 +23,4 @@ class ArticleList(BasePage):
         """
         self.click_for_element(self.__article_locator)
         return Article(self.driver)
+
